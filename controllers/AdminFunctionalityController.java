@@ -2,7 +2,7 @@
  * 
  */
 package controllers;
-import entity.*;
+import Entity.*;
 import controllers.*;
 
 /**

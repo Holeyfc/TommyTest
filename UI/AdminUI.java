@@ -2,7 +2,7 @@
  * Admin confirms that the account exist
  */
 package UI;
-import entity.*;
+import Entity.*;
 import controllers.*;
 /**
  * @author HoleyFanClub

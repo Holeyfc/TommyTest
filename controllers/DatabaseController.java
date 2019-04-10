@@ -1,6 +1,6 @@
 package controllers;
 import dblibrary.project.csci230.*;
-import entity.*;
+import Entity.*;
 import UI.*;
 import java.util.*;
 

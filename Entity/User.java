@@ -1,4 +1,4 @@
-package entity;
+package Entity;
 import controllers.*;
 import UI.*;
 //@Author HoleyFanClub

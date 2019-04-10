@@ -1,6 +1,6 @@
 //@author HoleyFanClub
 //@version 2.0
-package entity;
+package Entity;
 
 import dblibrary.project.csci230.*;
 import javax.swing.*;

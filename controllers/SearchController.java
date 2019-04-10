@@ -4,7 +4,7 @@
 package controllers;
 
 import java.util.*;
-import entity.*;
+import Entity.*;
 
 /**
  * @author nhoberg001

@@ -1,6 +1,6 @@
 package UI;
 import controllers.*;
-import entity.*;
+import Entity.*;
 /**
  * @author holyfan
  * @version 1.0

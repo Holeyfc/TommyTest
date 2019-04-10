@@ -3,8 +3,7 @@
  */
 package controllers;
 
-import entity.Admin;
-import entity.User;
+import Entity.*;
 
 /**
  * @author HoleyFanClub

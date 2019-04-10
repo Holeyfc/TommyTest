@@ -1,4 +1,7 @@
-package entity;
+package Entity;
+import javax.swing.JOptionPane;
+import java.util.*;
+
 import UI.*;
 import controllers.*;
 
@@ -80,18 +83,15 @@ public class Admin extends Account2
    * view the list of universities
    * @param university the universities to view
    */
-  public void viewUniversities(University university)
+  public void viewUniversities()
   {
 
-	//if (university.equals(lib.getListOfUniversities()))
+	ArrayList<University> schools = lib.getListOfUniversities();
 
-    //for(int i = 0; i < university.length(); i++)
-    //{
-      //for(int j = 0; j < university[i].length; j++)
-      //{
-       // System.out.println(university[i][j]);
-      //}
-    //}
+    for(int i = 0; i < schools.size(); i++)
+    {
+     System.out.println(schools.get(i).toString());
+    }
     
   }
   
@@ -138,8 +138,137 @@ public class Admin extends Account2
    */
   public void addNewUniversity()
   {
-    University sPC = new University("SAINT PAUL COLLEGE");
-    System.out.println("SAINT PAUL COLLEGE added");
+	  String name = JOptionPane.showInputDialog("please enter the schools name");
+	    String state = JOptionPane.showInputDialog("please enter the schools state");
+	    String location = JOptionPane.showInputDialog("please enter the schools location");
+	    String control = JOptionPane.showInputDialog("please enter the schools control");
+	    String numOfStudents2 = JOptionPane.showInputDialog("please enter the schools number of students");
+	    String percentFemale2 = JOptionPane.showInputDialog("please enter the schools percent female");
+	    String satVerbal2 = JOptionPane.showInputDialog("please enter the schools verbal sat");
+	    String satMath2 = JOptionPane.showInputDialog("please enter the schools math sat");
+	    String expenses2 = JOptionPane.showInputDialog("please enter the schools expenses");
+	    String percentFinancialAid2 = JOptionPane.showInputDialog("please enter the schools percent financial aid");
+	    String numOfApplicants2 = JOptionPane.showInputDialog("please enter the schools number of applicants");
+	    String percentAdmitted2 = JOptionPane.showInputDialog("please enter the schools percent admitted");
+	    String percentEnrolled2 = JOptionPane.showInputDialog("please enter the schools percent enrolled");
+	    String academicScale2 = JOptionPane.showInputDialog("please enter the schools academic scale");
+	    String socialScale2 = JOptionPane.showInputDialog("please enter the schools social scale");
+	    String qualityOfLifeScale2 = JOptionPane.showInputDialog("please enter the schools quality of life scale");
+	    
+	    int numOfStudents = -10;
+		double percentFemale = -10;
+		double satVerbal = -10;
+		double satMath = -10;
+		double expenses = -10;
+		double percentFinancialAid = -10;
+		int numOfApplicants = -10;
+		double percentAdmitted = -10;
+		double percentEnrolled = -10;
+		int academicScale = -10;
+		int socialScale = -10;
+		int qualityOfLifeScale;
+	    
+	    if(!numOfStudents2.equals(""))
+	    {
+	     numOfStudents = Integer.parseInt(numOfStudents2);
+	    }
+	    else
+	    {
+	     numOfStudents = -1;
+	    }
+	    if(!percentFemale2.equals(""))
+	    {
+	     percentFemale = Double.parseDouble(percentFemale2);
+	    }
+	    else
+	    {
+	     percentFemale = -1;
+	    }
+	    if(!satVerbal2.equals(""))
+	    {
+	     satVerbal = Double.parseDouble(satVerbal2);
+	    }
+	    else
+	    {
+	     satVerbal = -1;
+	    }
+	    if(!satMath2.equals(""))
+	    {
+	     satMath = Double.parseDouble(satMath2);
+	    }
+	    else
+	    {
+	     satMath = -1;
+	    }
+	    if(!expenses2.equals(""))
+	    {
+	     expenses = Double.parseDouble(expenses2);
+	    }
+	    else
+	    {
+	     expenses = -1;
+	    }
+	    if(!percentFinancialAid2.equals(""))
+	    {
+	     percentFinancialAid = Double.parseDouble(percentFinancialAid2);
+	    }
+	    else
+	    {
+	    percentFinancialAid = -1;
+	    }
+	    if(!numOfApplicants2.equals(""))
+	    {
+	     numOfApplicants = Integer.parseInt(numOfApplicants2);
+	    }
+	    else 
+	    {
+	    numOfApplicants = -1;
+	    }
+	    if(!percentAdmitted2.equals(""))
+	    {
+	     percentAdmitted = Double.parseDouble(percentAdmitted2);
+	    }
+	    else
+	    {
+	    percentAdmitted = -1;
+	    }
+	    if(!percentEnrolled2.equals(""))
+	    {
+	     percentEnrolled = Double.parseDouble(percentEnrolled2);
+	    }
+	    else
+	    {
+	     percentEnrolled = -1;
+	    }
+	    if(!academicScale2.equals(""))
+	    {
+	     academicScale = Integer.parseInt(academicScale2);
+	    }
+	    else
+	    {
+	     academicScale = -1;
+	    }
+	    if(!socialScale2.equals(""))
+	    {
+	     socialScale = Integer.parseInt(socialScale2);
+	    }
+	    else 
+	    {
+	     socialScale = -1;
+	    }
+	    if(!qualityOfLifeScale2.equals(""))
+	    {
+	     qualityOfLifeScale = Integer.parseInt(qualityOfLifeScale2);
+	    }
+	    else
+	    {
+	     qualityOfLifeScale = -1;
+	    }
+	    
+	    University sPC = new University(name, state, location, control, numOfStudents, percentFemale, satVerbal, satMath,
+	    		expenses, percentFinancialAid, numOfApplicants, percentAdmitted, 
+	    		percentEnrolled, academicScale, socialScale, qualityOfLifeScale);
+	    		
     
     //add a new university
     this.afc.addNewUniversity(sPC);

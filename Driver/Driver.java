@@ -1,7 +1,7 @@
 package Driver;
 
 import javax.swing.*;
-import entity.*;
+import Entity.*;
 import UI.*;
 import controllers.*;
 import dblibrary.project.csci230.*;
@@ -135,6 +135,9 @@ public class Driver implements ActionListener{
     else if(this.uc3 == event.getSource())
     {
       account2.viewProfile();
+    }
+    else if(this.uc4 == event.getSource()){
+    	admin.viewUniversities();
     }
     
     else if(this.uc5 == event.getSource())

@@ -1,4 +1,4 @@
-package entity;
+package Entity;
 import dblibrary.project.csci230.*;
 import controllers.*;
 /**
@@ -209,7 +209,16 @@ public class University extends UniversityController
   
   public void setLifeScale()
   {
-  //this.lifeScale = lifeScale;
+  this.lifeScale = lifeScale;
+  }
+  
+  public String toString()
+  {
+	  return name + " " + state + " " + location + " " + control + " \n" + Integer.toString(numOfStudents)
+	   + " " + Double.toString(percentFemale) + " " + Double.toString(satVerbal) + " \n" + Double.toString(satMath) + " "
+	   + Double.toString(expenses) + " " + Double.toString(finAid) + " " + Integer.toString(numApplicants) + " \n"
+	   + Double.toString(perAdmitted) + " \n" + Double.toString(perEnrolled) + " " + Integer.toString(academicScale) + 
+	   " " + Integer.toString(socialScale) + " " + Integer.toString(lifeScale);
   }
 
   
