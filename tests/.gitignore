@@ -3,3 +3,6 @@
 /testAddNewUniversity.class
 /TestDeactivateUser.class
 /TestDeleteSchool.class
+/loginLogOutTest.class
+/SearchOthersSavedSchoolsTest.class
+/TestDeleteUser.class

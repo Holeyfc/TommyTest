@@ -1,4 +1,4 @@
-package controllers;
+package tests;
 
 import static org.junit.Assert.*;
 
@@ -12,30 +12,22 @@ import UI.*;
 import java.util.*;
 
 
-public class TestDeleteUser {
-	Admin ad;
+public class SearchOthersSavedSchoolsTest {
+	Account2 ac;
 	DatabaseController lib;
 
 	
 	@Before
 	public void setUp() {
-		ad = new Admin();
+		ac = new Admin();
 		lib = new DatabaseController();
 	}
 	
 	@Test
 	public void test() {
-		ad.deleteUser();
-		boolean deleted = true;
-		String[][] users = lib.getUsers();
-		for(int i = 0; i < users.length; i++)
-		{
-		  if(users[i][2].equals("x"))
-				  {
-			 deleted = false;
-				  }
-		}
-		assertTrue(deleted == true);
+		ac.searchOthersSchools();
+	   boolean search = true;
+		assertTrue(search == true);
 		
 	}
 
