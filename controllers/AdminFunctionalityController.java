@@ -22,9 +22,9 @@ public class AdminFunctionalityController {
     this.database = new DatabaseController();
   }
   
-  public void deactivateUser()
+  public void deactivateUser(String name)
   {
-    this.database.editUser();
+    this.database.deactivateUser(name);
   }
   /**
    * 

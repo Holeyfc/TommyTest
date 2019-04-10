@@ -49,7 +49,8 @@ public class DatabaseController {
    */
   public int deleteUser(String username)
   {
-  return this.dbLibrary.user_deleteUser(username);
+	 System.out.println("user " + username + " has been deleted");
+     return this.dbLibrary.user_deleteUser(username);
   }
     
   
@@ -150,6 +151,7 @@ public class DatabaseController {
    */
   public int deleteUniversity(String uniName)
   {
+	 System.out.println("school " + uniName + " was deleted from the database");
     return this.dbLibrary.university_deleteUniversity(uniName);
   }
   
@@ -174,6 +176,19 @@ public class DatabaseController {
   public void editProfile()
   {
     this.dbLibrary.user_editUser("user", "first2" , "last" ,"pass" , 'u' , 'Y');
+  }
+  
+  public void deactivateUser(String name)
+  {
+	  String[][] users = this.dbLibrary.user_getUsers();
+	    for (int i = 0; i < users.length; i ++)
+	    {
+	      if (users[i][2].equals(name))
+	      {
+	        this.dbLibrary.user_editUser(name, users[i][0], users[i][1], users[i][3], users[i][4].charAt(0), 'N');
+	      }
+	    }
+	    System.out.println("user " + name + " deactivated.");
   }
   
 }

@@ -225,15 +225,25 @@ public class Account2 {
   
   public void searchOthersSchools()
   {
+	String name = JOptionPane.showInputDialog("please enter the username of who you want to search");
     String[][] usersAndSchools = lib.getUsernamesWithSavedSchools();
+    boolean header = false;
     for(int i = 0; i < usersAndSchools.length; i++)
     {
-      if(usersAndSchools[i][0].equals("juser"))
+    	
+      if(usersAndSchools[i][0].equals(name))
          {
-           System.out.println("juser's schools");
+    	   if(header == false)
+    	   {
+           System.out.println(name + "'s schools");
+    	   }
+    	   header = true;
            for(int j = 0; j < usersAndSchools[i].length; j++)
            {
+        	   if(j==1)
+        	   {
              System.out.println(usersAndSchools[i][j]);
+        	   }
            }
          }
     }

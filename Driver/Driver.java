@@ -17,11 +17,7 @@ import java.awt.event.*;
 // JLabel, JPanel
 import javax.swing.*;
 
-// GRect, GLabel
-import acm.graphics.*;
 
-// GraphicsProgram
-import acm.program.*;
 //file, file not found exception
 import java.io.*;
 import java.util.*;

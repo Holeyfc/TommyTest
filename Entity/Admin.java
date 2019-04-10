@@ -291,8 +291,8 @@ public class Admin extends Account2
   public void deleteSchool()
   {
     //delete the university
-    this.afc.deleteUniversity("SAINT PAUL COLLEGE");
-    System.out.println("University has been deleted.");
+	String name = JOptionPane.showInputDialog("please enter the school to be deleted");
+    this.afc.deleteUniversity(name);
   }
   
   /**
@@ -305,8 +305,8 @@ public class Admin extends Account2
   
   public void deactivateUser()
   {
-    this.afc.deactivateUser();
-    System.out.println("first deactivated");
+	String name = JOptionPane.showInputDialog("please enter the username to be deactivated");
+    this.afc.deactivateUser(name);
   }
   
   /**
@@ -314,8 +314,8 @@ public class Admin extends Account2
    */
   public void deleteUser()
   {
-    afc.deleteUser("lUser");
-    System.out.println("The user has been deleted.");
+	String name = JOptionPane.showInputDialog("please enter the username to be deleted");
+    afc.deleteUser(name);
   }
   
   
